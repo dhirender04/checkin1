@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.9"
+        android:background="@color/black1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ui.success_screen_fragment.SuccessFullCheckInFragment">
+
+        <ImageView
+            android:id="@+id/ivGreenTick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/success_icon"
+            android:src="@drawable/ic_check_in" />
+
+        <TextView
+            android:id="@+id/tvCheckInText"
+            style="@style/regular_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/you_have_checked_in"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvCheckInSuccessText"
+            style="@style/regular_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/successfully"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</layout>

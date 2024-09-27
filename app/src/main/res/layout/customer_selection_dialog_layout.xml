@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="10dp">
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/close_round_line_icon"
+                android:layout_gravity="end"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/blue_dark"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                app:cardUseCompatPadding="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/existingCustomerButton"
+                    style="@style/textFontTitleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:backgroundTint="@color/transparent"
+                    android:elevation="5dp"
+                    android:letterSpacing="0"
+                    android:textAllCaps="false"
+                    android:paddingVertical="18dp"
+                    android:text="Existing Customer"
+                    android:textColor="@color/white"
+                    app:cornerRadius="5dp" />
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:id="@+id/rlOrContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/myImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/or_text" />
+
+                <TextView
+                    android:id="@+id/myImageViewText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/myImageView"
+                    android:layout_alignTop="@+id/myImageView"
+                    android:layout_alignRight="@+id/myImageView"
+                    android:layout_alignBottom="@+id/myImageView"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="center"
+                    android:text="OR"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/newCustomerButton"
+                    style="@style/textFontTitleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:backgroundTint="@color/transparent"
+                    android:elevation="5dp"
+                    android:letterSpacing="0"
+                    android:textAllCaps="false"
+                    android:paddingVertical="18dp"
+                    android:text="New Customer"
+                    android:textColor="@color/blue_dark"
+                    app:cornerRadius="5dp" />
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

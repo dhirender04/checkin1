@@ -1,0 +1,47 @@
+<resources>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="personal_info">Personal Info</string>`
+    <string name="last_name">Last Name <font color='#FF0000'>*</font></string>
+    <string name="email">Email <font color='#FF0000'>*</font></string>
+    <string name="book_appointment">Book Appointment</string>
+    <string name="optional">(optional)</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="price">Price</string>
+    <string name="duration">Duration</string>
+    <string name="service_drop_down">Service Drop Down</string>
+    <string name="employee_drop_down_icon">Employee Drop Down Icon</string>
+    <string name="first_name">First Name <font color='#FF0000'>*</font></string>
+    <string name="register">Register</string>
+    <string name="back">Back</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="to_check_in">To Check In</string>
+    <string name="click_to_check_in">Click to Check In</string>
+    <string name="customer_registration">New Customer Registration</string>
+    <string name="bar_code_scanner_icon">Bar Code Scanner Icon</string>
+    <string name="success_icon">Success Icon</string>
+    <string name="you_have_checked_in">You have checked In</string>
+    <string name="successfully">Successfully</string>
+    <string name="mobile_no">Mobile No <font color='#FF0000'>*</font></string>
+    <string name="gender">Gender</string>
+    <string name="mm_dd_yyyy">DOB(MM/DD/YYYY)</string>
+    <string name="cancellation_policy">I have read and agree to the <font color="#24BCFD"> <u><b> Cancellation</b> <b> &amp; No-Show Policy</b></u></font></string>
+    <string name="your_appointment_is_booked">Your appointment is booked!</string>
+    <string name="download_the_hubwallet_client_app_to_book_and_manage_your_appointments">Download the Hubwallet Client app to book and manage your appointments.\nCheck your email to view the login details. </string>
+    <string name="maskType">(###) ###-####</string>
+    <string name="open_the_hubwallet_app_and_scan_this_qr_code_to_check_in">Open the Hubwallet app\n and scan this \nQR Code to check-in</string>
+
+
+    <string-array name="name">
+        <item>Services</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+</resources>

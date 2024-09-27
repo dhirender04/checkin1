@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+            name="viewModel"
+            type="com.hubwallet.customer_checkin.ui.checkinscreen.CheckInFragmentViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.HomeScreen">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clLeftContainer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#F9F6FF"
+                android:elevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/ivBarCodeLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:src="@drawable/qr_ic"
+                        app:layout_constraintBottom_toTopOf="@+id/tvbarCodeTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvbarCodeTitle"
+                        style="@style/textFontTitleStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:text="Scan OR Code"
+                        app:layout_constraintBottom_toTopOf="@+id/tvbarCodeSubTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvbarCodeSubTitle"
+                        style="@style/textFontSubTitleStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:paddingBottom="20dp"
+                        android:text="Open the Hubwallet app and scan this QR Code to check-in"
+                        android:textColor="@color/grey4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/llbarcodeCoantiner"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llbarcodeCoantiner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/barCodeTitle"
+                            style="@style/regular_bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Existing User"
+                            android:textColor="@color/black1"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+
+
+                        <ImageView
+                            android:id="@+id/ivBarCodeImg"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_marginTop="10dp"
+                             />
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llRightContainer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:elevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5">
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/tvEnterNumberLabel"-->
+                <!--                    style="@style/regular_bold"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="50dp"-->
+                <!--                    android:layout_marginStart="5dp"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:layout_marginEnd="5dp"-->
+                <!--                    android:background="@drawable/rectangle_arrow"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Enter Phone Number"-->
+                <!--                    android:textColor="@color/white"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    app:layout_constraintBottom_toTopOf="@+id/keyboard"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+
+                <include
+                    android:id="@+id/keyboard"
+                    layout="@layout/input_digit_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    bind:secondViewModel="@{viewModel}" />
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_margin="10dp"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:padding="10dp"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+                <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                <!--                        android:id="@+id/tvPinWrap"-->
+                <!--                        style="@style/TextInputLayoutStyle"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:hint="Enter Phone Number">-->
+
+                <!--                        <com.google.android.material.textfield.TextInputEditText-->
+                <!--                            android:id="@+id/tvPin"-->
+                <!--                            style="@style/textInputEditText"-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:inputType="number" />-->
+
+                <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                <!--                    <Button-->
+                <!--                        android:id="@+id/loginButton"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="5dp"-->
+                <!--                        android:layout_weight="0.5"-->
+                <!--                        android:paddingVertical="20dp"-->
+                <!--                        android:text="Check-In"-->
+                <!--                        android:textAllCaps="false"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@+id/etPin" />-->
+                <!--                </LinearLayout>-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:elevation="5dp"
+                android:src="@drawable/or_verticle_ic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/llRightContainer"
+                app:layout_constraintStart_toEndOf="@+id/clLeftContainer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round_shape"
+                android:elevation="5dp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="OR"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/llRightContainer"
+                app:layout_constraintStart_toEndOf="@+id/clLeftContainer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            app:contentPadding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tvCountDown"
+                style="@style/textFontTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <include
+            android:id="@+id/progressBar"
+            layout="@layout/common_progress_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

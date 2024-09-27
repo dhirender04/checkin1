@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F9F6FF"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <include
+                    android:id="@+id/header"
+                    layout="@layout/header_layout"
+                    android:visibility="gone" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/clExistingContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/nsContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tvPersonalDetail"
+                                style="@style/regular_semi_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New Customer Registration"
+                                android:textColor="@color/black1"
+                                android:textSize="20sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <LinearLayout
+                                android:id="@+id/registraionContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/tvFirstNameWrap"
+                                        style="@style/TextInputLayoutStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:hint="@string/first_name">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/tvFirstName"
+                                            style="@style/textInputEditText"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:maxLength="15" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/tvLastNameWrap"
+                                        style="@style/TextInputLayoutStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:hint="@string/last_name">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/tvLastName"
+                                            style="@style/textInputEditText"
+                                            android:inputType="text"
+                                            android:maxLength="15"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/tvMobileWrap"
+                                        style="@style/TextInputLayoutStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rectangle_border"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:hint="@string/mobile_no">
+
+                                        <com.vicmikhailau.maskededittext.MaskedEditText
+                                            android:id="@+id/tvMobile"
+                                            style="@style/textInputEditText"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:background="@color/transparent"
+                                             android:gravity="start"
+                                            android:imeOptions="actionNext"
+                                            android:inputType="phone"
+                                            android:textColor="@color/black"
+                                            app:layout_constraintEnd_toStartOf="@+id/btOkay"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:mask="@string/maskType" />
+
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/tvEmailWrap"
+                                        style="@style/TextInputLayoutStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:hint="@string/email">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/tvEmail"
+                                            style="@style/textInputEditText"
+                                            android:layout_width="match_parent"
+                                            android:text=""
+                                            android:maxLength="50"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="vertical">
+
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/gender"
+                                            android:orientation="horizontal"
+                                            app:boxStrokeColor="#C7C7C7">
+
+                                            <AutoCompleteTextView
+                                                android:id="@+id/spGender"
+                                                style="@style/textInputEditText"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:inputType="none" />
+
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+                                        <TextView
+                                            android:id="@+id/tvoptionalGender"
+                                            style="@style/regular_semi_bold"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="end"
+                                            android:text="(Optional)"
+                                            android:textColor="@color/grey"
+                                            android:textSize="12sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="vertical">
+
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            style="@style/TextInputLayoutStyle"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/mm_dd_yyyy"
+                                            android:orientation="horizontal">
+
+                                            <com.vicmikhailau.maskededittext.MaskedEditText
+                                                android:id="@+id/tv_birthday"
+                                                style="@style/regular_semi_bold"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="55dp"
+                                                android:gravity="center_vertical"
+                                                android:imeOptions="actionNext"
+                                                android:inputType="date"
+                                                android:maxLength="10"
+                                                android:textColor="@color/black"
+                                                android:textColorHint="@color/grey"
+                                                android:textSize="14sp"
+                                                app:mask="##-##-####" />
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+                                        <TextView
+                                            android:id="@+id/tvoptionalDob"
+                                            style="@style/regular_semi_bold"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="end"
+                                            android:text="(Optional)"
+                                            android:textColor="@color/grey"
+                                            android:textSize="12sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnRegister"
+                                style="@style/regular_semi_bold"
+                                android:layout_width="500dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="10dp"
+                                android:backgroundTint="#30A0EC"
+                                android:paddingVertical="15dp"
+                                android:text="Register"
+                                android:textAllCaps="false"
+                                android:textSize="16sp"
+                                app:cornerRadius="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/nsContainer" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.cardview.widget.CardView>
+                </ScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/progressBar"
+
+            layout="@layout/common_progress_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

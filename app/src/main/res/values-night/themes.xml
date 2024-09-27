@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HubwalletCustomer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/purple_200</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+
+    //font
+
+    <style name="regular_font">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="regular_semi_bold">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="regular_bold">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="regular_medium">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor" tools:ignore="PrivateResource">@color/mtrl_textinput_default_box_stroke_color</item>
+        <item name="hintTextColor">@color/border_color</item>
+    </style>
+</resources>

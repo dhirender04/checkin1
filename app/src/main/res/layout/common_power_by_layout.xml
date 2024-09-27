@@ -1,0 +1,35 @@
+
+<layout>
+<LinearLayout android:id="@+id/llPowerByContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="end|center"
+    android:orientation="horizontal"
+    android:padding="15dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvpowerBy"
+        style="@style/regular_semi_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Powered by:"
+        android:textColor="@color/black2"
+        android:textSize="10sp" />
+
+
+    <ImageView
+        android:id="@+id/ivPowerByLogo"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/hubwallet_logo" />
+
+</LinearLayout>
+</layout>

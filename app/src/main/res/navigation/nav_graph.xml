@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/customerRegistration"
+        android:name="com.hubwallet.customer_checkin.ui.customer_registration.CustomerRegistration"
+        android:label="fragment_home"
+        tools:layout="@layout/customer_registration">
+        <action
+            android:id="@+id/action_homeFragment_to_scanQrCodeFragment"
+            app:destination="@id/scanQrCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanQrCodeFragment"
+        android:name="com.hubwallet.customer_checkin.ui.scan_qr_code.ScanQrCodeFragment"
+        android:label="ScanQrCodeFragment">
+        <action
+            android:id="@+id/action_scanQrCodeFragment_to_successFullCheckInFragment"
+            app:destination="@id/successFullCheckInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFullCheckInFragment"
+        android:name="com.hubwallet.customer_checkin.ui.success_screen_fragment.SuccessFullCheckInFragment"
+        android:label="SuccessFullCheckInFragment">
+        <action
+            android:id="@+id/action_successFullCheckInFragment_to_homeFragment"
+            app:destination="@id/customerRegistration" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.hubwallet.customer_checkin.ui.home.HomeScreen"
+        android:label="HomeScreen" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.hubwallet.customer_checkin.ui.login.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/checkInFragment"
+        android:name="com.hubwallet.customer_checkin.ui.checkinscreen.CheckInFragment"
+        android:label="CheckInFragment" />
+    <fragment
+        android:id="@+id/existingCustomerCheckInFragment"
+        android:name="com.hubwallet.customer_checkin.ui.existing_customer.ExistingCustomerCheckInFragment"
+        android:label="ExistingCustomerCheckInFragment" />
+    <fragment
+        android:id="@+id/serviceSelectionFragment"
+        android:name="com.hubwallet.customer_checkin.ui.book_appointment.service_selection.ServiceSelectionFragment"
+        android:label="ServiceSelectionFragment" />
+    <fragment
+        android:id="@+id/providerSelectionFragment"
+        android:name="com.hubwallet.customer_checkin.ui.book_appointment.provider_selection.ProviderSelectionFragment"
+        android:label="fragment_provider_selection"
+        tools:layout="@layout/fragment_provider_selection" />
+    <fragment
+        android:id="@+id/dateAndTimeFragment"
+        android:name="com.hubwallet.customer_checkin.ui.book_appointment.date_and_time_selection.DateAndTimeFragment"
+        android:label="fragment_date_and_time"
+        tools:layout="@layout/fragment_date_and_time" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.hubwallet.customer_checkin.ui.book_appointment.checkout.CheckoutFragment"
+        android:label="CheckoutFragment" />
+
+</navigation>
